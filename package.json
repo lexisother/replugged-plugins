@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "bundle": "tsx scripts/bundle.ts",
+    "build-and-bundle": "pnpm run build --no-install && pnpm run bundle"
+  },
+  "devDependencies": {
+    "@electron/asar": "^3.2.1",
+    "esbuild": "^0.15.11",
+    "esbuild-sass-plugin": "^2.4.4",
+    "replugged": "v4.0.0-rc.3",
+    "tsx": "^3.10.3",
+    "typescript": "^4.8.4"
+  }
+}
