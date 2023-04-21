@@ -1,15 +1,47 @@
 {
+  "name": "plugins",
+  "version": "1.0.0",
+  "description": "what?",
+  "private": true,
+  "engines": {
+    "node": ">=19.7.0"
+  },
   "scripts": {
     "build": "tsx scripts/build.ts",
+    "watch": "pnpm build --watch",
+    "dev": "pnpm watch",
     "bundle": "tsx scripts/bundle.ts",
-    "build-and-bundle": "pnpm run build --no-install && pnpm run bundle"
+    "build-and-bundle": "pnpm run build --no-install && pnpm run bundle",
+    "check": "tsc --noEmit",
+    "prettier:check": "prettier ./plugins ./scripts --check",
+    "eslint:check": "eslint ./plugins/**/*.ts* ./scripts/*.ts",
+    "prettier:fix": "prettier ./plugins ./scripts --write",
+    "eslint:fix": "eslint ./plugins/**/*.ts* ./scripts/*.ts --fix",
+    "lint": "pnpm run prettier:check && pnpm run eslint:check && pnpm run check",
+    "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix"
   },
+  "author": "Alyxia Sother",
   "devDependencies": {
-    "@electron/asar": "^3.2.1",
-    "esbuild": "^0.15.11",
-    "esbuild-sass-plugin": "^2.4.4",
-    "replugged": "v4.0.0-rc.3",
-    "tsx": "^3.10.3",
-    "typescript": "^4.8.4"
+    "@electron/asar": "^3.2.3",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.15.7",
+    "@types/react": "^18.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "esbuild": "^0.15.18",
+    "esbuild-sass-plugin": "^2.8.0",
+    "eslint": "^8.36.0",
+    "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^2.8.7",
+    "replugged": "4.2.2",
+    "tsx": "^3.12.6",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "deepmerge": "^4.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

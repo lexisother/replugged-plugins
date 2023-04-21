@@ -1,0 +1,18 @@
+{
+  "id": "dev.alyxia.removeChannelEmojis",
+  "name": "Remove Channel Emojis",
+  "description": "Gets rid of those godawful emojis next to channel names.",
+  "author": {
+    "name": "Alyxia",
+    "discordID": "952185386350829688",
+    "github": "lexisother"
+  },
+  "version": "1.0.0",
+  "updater": {
+    "type": "github",
+    "id": "lexisother/replugged-plugins"
+  },
+  "license": "Apache-2.0",
+  "type": "replugged-plugin",
+  "plaintextPatches": "plaintextPatches.ts"
+}
