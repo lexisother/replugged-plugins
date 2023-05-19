@@ -2,11 +2,11 @@ import { PlaintextPatch } from "replugged/dist/types";
 
 export default [
   {
-    find: /.{1,2}\.getGuildChannelEmojis/,
+    find: /iconEmoji/,
     replacements: [
       {
-        match: /(.{1,2}\.getGuildChannelEmojis)=function\(.\){.*?}/,
-        replace: (_, def) => `${def}=function() {}`,
+        match: /return\{iconEmoji:.{1,2}.*?\}/,
+        replace: (_) => `return{iconEmoji:null}`,
       },
     ],
   },
