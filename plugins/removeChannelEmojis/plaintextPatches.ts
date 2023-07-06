@@ -14,6 +14,15 @@ export default [
       },
     ],
   },
+  {
+    find: /\.emojiColorFill/,
+    replacements: [
+      {
+        match: /className:.{1,2}\(\)\.emojiColorFill/,
+        replace: (_) => `className:''`,
+      },
+    ],
+  },
   ...(pSettings.get("unicode")
     ? ([
         {
