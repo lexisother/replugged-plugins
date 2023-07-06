@@ -1,0 +1,18 @@
+{
+  "id": "dev.alyxia.greentext",
+  "name": "Greentext",
+  "description": ">be me, use greentext",
+  "author": {
+    "name": "Alyxia",
+    "discordID": "952185386350829688",
+    "github": "lexisother"
+  },
+  "version": "1.0.0",
+  "updater": {
+    "type": "store",
+    "id": "dev.alyxia.greentext"
+  },
+  "license": "Apache-2.0",
+  "type": "replugged-plugin",
+  "renderer": "index.tsx"
+}
