@@ -7,12 +7,14 @@
     "discordID": "952185386350829688",
     "github": "lexisother"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updater": {
     "type": "store",
     "id": "dev.alyxia.greentext"
   },
+  "image": "https://github.com/lexisother/replugged-plugins/blob/master/assets/greentext.png",
   "license": "Apache-2.0",
   "type": "replugged-plugin",
-  "renderer": "index.tsx"
+  "renderer": "index.tsx",
+  "reloadRequired": true
 }
