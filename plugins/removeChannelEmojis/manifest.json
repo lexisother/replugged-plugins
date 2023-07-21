@@ -7,13 +7,15 @@
     "discordID": "952185386350829688",
     "github": "lexisother"
   },
-  "version": "1.3.0",
+  "version": "1.3.1",
   "updater": {
     "type": "store",
     "id": "dev.alyxia.removeChannelEmojis"
   },
+  "image": "https://github.com/lexisother/replugged-plugins/blob/master/assets/removechannelemojis.png",
   "license": "Apache-2.0",
   "type": "replugged-plugin",
   "renderer": "index.ts",
+  "reloadRequired": true,
   "plaintextPatches": "plaintextPatches.ts"
 }
