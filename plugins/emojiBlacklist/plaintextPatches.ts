@@ -12,7 +12,7 @@ export default [
         replace: (_, orig, container) =>
           `${container}.unlocked=${__a_require(
             "filterEmojis",
-          )}.filterEmojis(${container}.unlocked);${orig}${container}`,
+          )}(${container}.unlocked);${orig}${container}`,
       },
     ],
   },
