@@ -74,7 +74,7 @@ export function Settings(): React.ReactElement {
     <>
       <FormItem
         title="Emoji blacklist"
-        note="Enter your list of emojis to blacklist here. They must be comma separated values, like so: `370877996112019456,1090374917058465792,967472493667450890`"
+        note="Add your list of emojis to blacklist here."
         divider={true}>
         <Text
           tag={"h4"}
