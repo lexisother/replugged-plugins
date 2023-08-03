@@ -6,6 +6,7 @@ const Margins = webpack.getByProps(
   ["marginTop8", "marginCenterHorz", "marginLarge", "marginBottom20"],
   { all: false, raw: false },
 )!;
+const Emoji = webpack.getBySource(".allowAnimatedEmoji");
 
 const {
   sanitizeEmojiName,
@@ -44,7 +45,9 @@ export function Settings(): React.ReactElement {
         <Flex
           key={`${emoji.id}`}
           direction={Flex.Direction.HORIZONTAL}
-          className={Margins.marginBottom20 as string}>
+          className={Margins.marginBottom20 as string}
+          align={Flex.Align.CENTER}>
+          <Emoji emojiId={list[i].text} size="jumbo" />
           <Flex.Child shrink={0} basis="99%">
             {/* HACK: Wrapping the TextInput in a Flex.Child does nothing, and
               setting the flex style directly on it doesn't help either because it is
