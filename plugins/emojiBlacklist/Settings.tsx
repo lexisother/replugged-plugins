@@ -7,6 +7,12 @@ const Margins = webpack.getByProps(
   { all: false, raw: false },
 )!;
 
+const {
+  sanitizeEmojiName,
+}: {
+  sanitizeEmojiName: (arg: string) => string;
+} = await webpack.waitForProps("sanitizeEmojiName");
+
 interface Settings {
   emojiList: string;
 }
@@ -46,7 +52,7 @@ export function Settings(): React.ReactElement {
             <div style={{ flex: "1 0 auto" }}>
               <TextInput
                 value={list[i].text}
-                error={!/^\d{17,19}$/.test(emoji.text) ? "Invalid ID" : ""}
+                error={sanitizeEmojiName(emoji.text) !== emoji.text ? "Invalid ID" : ""}
                 onChange={(text) => {
                   setList(list.map((val) => (val.id === emoji.id ? { ...val, text } : val)));
                 }}
