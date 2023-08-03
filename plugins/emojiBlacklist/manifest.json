@@ -16,7 +16,7 @@
   "image": "https://raw.githubusercontent.com/lexisother/replugged-plugins/e78b3a728580f32b6dc10efe592e779564cf7b97/assets/emojiblacklist.png",
   "license": "Apache-2.0",
   "type": "replugged-plugin",
-  "renderer": "index.ts",
+  "renderer": "index.tsx",
   "reloadRequired": true,
   "plaintextPatches": "plaintextPatches.ts"
 }
