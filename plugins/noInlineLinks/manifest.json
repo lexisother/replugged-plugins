@@ -9,9 +9,11 @@
   },
   "version": "1.0.0",
   "updater": {
-    "type": "github",
-    "id": "lexisother/replugged-plugins"
+    "type": "store",
+    "id": "dev.alyxia.noInlineLinks"
   },
+  "source": "https://github.com/lexisother/replugged-plugins/blob/master/plugins/noInlineLinks/",
+  "image": "https://raw.githubusercontent.com/lexisother/replugged-plugins/master/assets/noinlinelinks.png",
   "license": "Apache-2.0",
   "type": "replugged-plugin",
   "plaintextPatches": "plaintextPatches.ts"
