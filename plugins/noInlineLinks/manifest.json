@@ -1,0 +1,18 @@
+{
+  "id": "dev.alyxia.noInlineLinks",
+  "name": "No Inline Links",
+  "description": "Forcibly disables inline Markdown links.",
+  "author": {
+    "name": "Alyxia",
+    "discordID": "952185386350829688",
+    "github": "lexisother"
+  },
+  "version": "1.0.0",
+  "updater": {
+    "type": "github",
+    "id": "lexisother/replugged-plugins"
+  },
+  "license": "Apache-2.0",
+  "type": "replugged-plugin",
+  "plaintextPatches": "plaintextPatches.ts"
+}
