@@ -5,23 +5,32 @@ const __a_require = (e: string): string =>
   `window.replugged.plugins.getExports("dev.alyxia.removeChannelEmojis").${e}`;
 
 export default [
+  // {
+  //   find: /iconEmoji/,
+  //   replacements: [
+  //     {
+  //       match: /return\{iconEmoji:.{1,2}.*?\}/,
+  //       replace: (_) => `return{iconEmoji:null}`,
+  //     },
+  //   ],
+  // },
+  // {
+  //   find: /\.emojiColorFill/,
+  //   replacements: [
+  //     {
+  //       match: /className:.{1,2}\(\)\.emojiColorFill/,
+  //       replace: (_) => `className:''`,
+  //     },
+  //   ],
+  // },
   {
-    find: /iconEmoji/,
-    replacements: [
-      {
-        match: /return\{iconEmoji:.{1,2}.*?\}/,
-        replace: (_) => `return{iconEmoji:null}`,
-      },
-    ],
-  },
-  {
-    find: /\.emojiColorFill/,
-    replacements: [
-      {
-        match: /className:.{1,2}\(\)\.emojiColorFill/,
-        replace: (_) => `className:''`,
-      },
-    ],
+    find: {
+      match: /useChannelEmojiAndColor:/,
+    },
+    replace: {
+      match: /return{emoji:(.*?),color:(.*?)}/g,
+      replacement: (_) => `return{emoji:null,color:null}`,
+    },
   },
   ...(pSettings.get("unicode")
     ? ([
