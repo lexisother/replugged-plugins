@@ -1,0 +1,19 @@
+{
+  "id": "dev.alyxia.cumcordLoader",
+  "name": "Cumcord Loader",
+  "description": "Loads Cumcord.",
+  "author": {
+    "name": "Alyxia",
+    "discordID": "952185386350829688",
+    "github": "lexisother"
+  },
+  "version": "1.0.0",
+  "updater": {
+    "type": "store",
+    "id": "dev.alyxia.cumcordLoader"
+  },
+  "source": "https://github.com/lexisother/replugged-plugins/blob/master/plugins/cumcordLoader/",
+  "license": "Apache-2.0",
+  "type": "replugged-plugin",
+  "renderer": "index.ts"
+}
