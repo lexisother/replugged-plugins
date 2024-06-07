@@ -2,11 +2,11 @@ import { common, components, settings, webpack } from "replugged";
 const { Text, TextInput, Flex, FormItem, Button } = components;
 const { React } = common;
 
-const Margins = webpack.getByProps(
-  ["marginTop8", "marginCenterHorz", "marginLarge", "marginBottom20"],
-  { all: false, raw: false },
-)!;
-const Emoji = webpack.getBySource(".allowAnimatedEmoji");
+const Margins = webpack.getByProps(["marginTop8", "marginCenterHorz", "marginBottom20"], {
+  all: false,
+  raw: false,
+})!;
+const Emoji = webpack.getBySource(/allowAnimatedEmoji:.{1,2},.*?=this.props/);
 
 const {
   sanitizeEmojiName,
@@ -64,7 +64,7 @@ export function Settings(): React.ReactElement {
           </Flex.Child>
           <Flex.Child grow={0} basis="1%">
             <Button
-              hover={Button.Hovers.RED}
+              hover={Button.Colors.RED}
               look={Button.Looks.OUTLINED}
               color={Button.Colors.LINK}
               style={{ minWidth: "unset" }}
